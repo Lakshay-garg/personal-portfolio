@@ -1,0 +1,523 @@
+.outermost-container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Home CSS */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 96vh;
+    width: 80%;
+    margin: auto;
+    color: #C8ACD6;
+}
+
+.intro{
+    text-transform: uppercase;
+    flex: 1;
+    margin-top: 15%;
+}
+
+.intro h1{
+    font-size: 5em;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.intro p{
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-size: 2em;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro .about-me{
+    display: flex;
+    margin-left: 12%;
+    gap: 20px;
+}
+
+.about-me button{
+    border: 3px solid #535C91;
+    background-color: #070F2B;
+    border-radius: 20%;
+    color: #E2E2B6;
+    font-family: "Bungee", sans-serif;
+}
+
+.about-me a{
+    border: 3px solid #535C91;
+    background-color: #070F2B;
+    border-radius: 20%;
+    color: #E2E2B6;
+    text-decoration: none;
+    font-family: "Bungee", sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 13%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 5px; /* Space between icons */
+    text-decoration: none;
+    font-size: 60px;
+}
+
+.hover-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover Label Styling */
+.hover-label {
+    position: absolute;
+    top: 0%; /* Positioned slightly above the center of the image */
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #6A3EA1; /* Purple color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+    pointer-events: none; /* Initially not clickable */
+}
+
+
+.hover-label i {
+    margin-left: 5px;
+}
+
+/* Hover Effect */
+.hover-container:hover .hover-label,
+.hover-label:hover {
+    opacity: 1;
+    pointer-events: auto; /* Allow interaction when visible */
+}
+
+.hover-container:hover .latest-work-image {
+    transform: scale(1.05); /* Zoom-in effect on image */
+}
+
+.social-links li a {
+    font-size: 36px; /* Adjust icon size */
+    color: #C8ACD6;
+}
+
+/* Home CSS Ends */
+
+/* About CSS */
+
+.about-popup{
+    display: none;
+    border: 3px solid #535C91;
+    align-items: center;
+    top: 5%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 99999;
+    width: 80%;
+    height: 90vh;
+}
+
+.about-container{
+    padding-left: 5%;
+    display:flex;
+    background-color: #021526;
+    height: 85vh;
+    align-items: center; /* Aligns items vertically */
+    gap: 14%; /* Space between the image and the text */
+}
+
+.home.blur-effect {
+    filter: blur(8px); /* Apply blur effect */
+    pointer-events: none;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column; 
+    color: #C8ACD6;
+    font-size: 1em;
+    position: relative;
+}
+
+.about-text h1{
+    font-family: "Bungee", sans-serif;
+}
+
+.about-text p{
+    font-family: "Montserrat", sans-serif;
+    margin-top: 2%;
+}
+
+.about-image{
+    margin-top: 2%;
+    margin-right: 18%;
+    height: auto;
+    width: auto;
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+.cross-button {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    font-size: 35px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.my-stack{
+    display: flex;
+    max-width: 30%;
+    border-radius: 50%;
+    margin-top: 4%;
+}
+
+.my-stack img {
+    margin-right: 12%;
+    height: 40px; /* Adjust this height as needed */
+}
+
+.about-text .mystack-text{
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Bungee", sans-serif;
+}
+
+.about-my-stack{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+.about-my-stack li{
+    border: 1.7px solid white;
+    border-radius: 50px;
+    padding: 0.4em 0.8em;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+/* About CSS Ends */
+
+
+/* Latest Work CSS */
+
+.latest-work{
+    position: relative;
+}
+
+.heading {
+    display: inline-block; /* Ensures the box fits closely around the text */
+    padding: 10px 20px; /* Space inside the box */
+    border: 5px solid #535C91; /* Border around the text */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #021526; /* Optional: background color */
+    font-size: 24px; /* Adjusts the font size */
+    font-weight: bold;
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#C8ACD6
+}
+
+.heading-container{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.project{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    margin-top: 3%;
+}
+
+.project-details{
+    width: 50%;
+}
+
+.project0 .circle-extension {
+    background-color: #fc815c;
+}
+
+.project .circle-extension {
+    width: 35%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    z-index: 1;
+}
+
+.project-image{
+    width: 50%;
+}
+
+.project .circle-dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--light);
+    border: 3px solid #2694d4;
+    position: absolute;
+    border-radius: 50%;
+    top: 28%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.latest-work-image{
+    height: 70%;
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.project-info{
+    margin-left: 10%;
+    margin-top: 5%;
+    color: #C8ACD6;
+}
+
+.project-info p{
+    margin-top: 3%;
+}
+
+.project-stack{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+    padding-left: 0;
+    margin-top: 5%;
+}
+
+.project-stack li{
+    border: 1.7px solid rgb(2, 0, 0);
+    border-radius: 50px;
+    padding: 0.4em 0.8em;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.project2-image{
+    margin-left: 37%;
+}
+
+.project1 .circle-dot{
+    width: 15px;
+    height: 15px;
+    background-color: var(--light);
+    border: 3px solid #97460c;
+    position: absolute;
+    border-radius: 50%;
+    top: 74%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.project1 .circle-extension {
+    width: 35%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 74%;
+    left: 85%;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    z-index: 1;
+}
+
+.vertical-line{
+    width: 2px;
+    background-color: #ccc;
+
+}
+
+/* query CSS */
+
+
+/* General form styling */
+.query-box {
+    display: block;
+    width: 100%;
+    max-width: 600px; /* Set a max width for the form */
+    margin: 0 auto; /* Centering the form */
+    padding: 20px;
+    border: 8px solid #535C91; /* Optional border */
+    border-radius: 5px; /* Optional rounded corners */
+    background-color: #021526; /* Optional background */
+}
+.label{
+    color:#C8ACD6
+}
+
+.input{
+    background-color: #021526;
+    border: 2px solid #535C91;
+}
+
+/* Title styling */
+.heading2 {
+    display: inline-block; /* Ensures the box fits closely around the text */
+    padding: 10px 20px; /* Space inside the box */
+    border: 5px solid #535C91; /* Border around the text */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #021526; /* Optional: background color */
+    font-size: 24px; /* Adjusts the font size */
+    font-weight: bold;
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#C8ACD6
+}
+
+/* Group labels and inputs together */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Place Name and Email side by side */
+.form-group:nth-child(1), .form-group:nth-child(2) {
+    display: inline-block;
+    width: 48%; /* Adjust the width for side-by-side layout */
+}
+
+.form-group:nth-child(1) {
+    margin-right: 3%; /* Add gap between Name and Email */
+}
+
+/* Full width for the message field */
+.full-width {
+    width: 100%;
+}
+
+
+/* Input field styling */
+input, textarea {
+    margin-top: 2%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make textarea larger */
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Form action buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button.send-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+}
+
+button.clear-btn {
+    background-color: #f44336; /* Red background */
+    color: white;
+}
+
+
+footer p{
+    text-align: center;
+    color: #C8ACD6;
+}
+
+.social-links-footer {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 20px;
+    font-size: 40px;
+    margin-bottom: 1%;
+}
+
+.social-links-footer li a {
+    font-size: 24px; /* Adjust icon size */
+    color: #C8ACD6;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .social-links {
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    @media (max-width: 768px) {
+        .my-stack {
+            flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        }
+    }
+}
+
