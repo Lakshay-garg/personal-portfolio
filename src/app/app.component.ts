@@ -68,12 +68,11 @@ export class AppComponent {
         .then(
           (response) => {
             alert('Message Sent Successfully!');
-            console.log(response);
             this.contactFormGroup.reset();
           },
           (error) => {
             alert('Error: ' + JSON.stringify(error));
-            console.log(error);
+            alert('I think a problem occurred')
           }
         );
     } else {
